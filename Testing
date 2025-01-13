@@ -1,0 +1,13 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CdpServiceTest {
+
+    CdpService cdpService = new CdpService();
+
+    @Test
+    public void testGetAnswer() {
+        String response = cdpService.getAnswer("How do I set up a new source in Segment?");
+        assertTrue(response.contains("To set up a new source in Segment"));
+    }
+}

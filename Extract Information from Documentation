@@ -1,0 +1,25 @@
+package com.cdpchatbot.service;
+
+import org.springframework.stereotype.Service;
+import java.util.HashMap;
+import java.util.Map;
+
+@Service
+public class DocumentationIndexer {
+
+    private static final Map<String, String> documentationMap = new HashMap<>();
+
+    static {
+        documentationMap.put("segment_new_source", "To set up a new source in Segment, go to the 'Sources' tab...");
+        documentationMap.put("mparticle_create_user_profile", "To create a user profile in mParticle, navigate to the 'Users' section...");
+    }
+
+    public String getDocumentationAnswer(String query) {
+        // Simulate keyword matching for document extraction
+        if (documentationMap.containsKey(query.toLowerCase())) {
+            return documentationMap.get(query.toLowerCase());
+        } else {
+            return "Sorry, no information found.";
+        }
+    }
+}

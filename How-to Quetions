@@ -1,0 +1,6 @@
+public String getAdvancedGuide(String query) {
+    if (query.contains("segment") && query.contains("audience configuration")) {
+        return "For advanced audience configuration in Segment, you can use 'audience filters' and 'triggers' to personalize your audience.";
+    }
+    return "Sorry, I couldn't find any advanced guides for this topic.";
+}

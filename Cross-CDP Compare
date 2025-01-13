@@ -1,0 +1,6 @@
+public String compareCDPs(String comparisonQuery) {
+    if (comparisonQuery.contains("segment") && comparisonQuery.contains("lytics")) {
+        return "In Segment, audience creation involves defining segments based on user data. Lytics offers more advanced behavioral analytics for segment creation.";
+    }
+    return "Comparison not available for this query.";
+}

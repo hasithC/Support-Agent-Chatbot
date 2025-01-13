@@ -1,0 +1,3 @@
+public String preprocessInput(String input) {
+    return input.toLowerCase().replaceAll("[^a-zA-Z0-9 ]", "").trim();
+}

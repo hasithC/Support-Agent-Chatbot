@@ -1,0 +1,18 @@
+package com.cdpchatbot.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CdpService {
+
+    public String getAnswer(String question) {
+        // Simple keyword-based extraction logic (can be replaced with NLP in advanced version)
+        if (question.toLowerCase().contains("segment") && question.toLowerCase().contains("new source")) {
+            return "To set up a new source in Segment, go to the 'Sources' tab and click 'Add Source'. Follow the prompts to select and configure the source.";
+        } else if (question.toLowerCase().contains("mparticle") && question.toLowerCase().contains("create user profile")) {
+            return "To create a user profile in mParticle, navigate to the 'Users' section and click 'Create User'. Provide the necessary details.";
+        } else {
+            return "Sorry, I couldn't find an answer to your question.";
+        }
+    }
+}
